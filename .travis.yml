@@ -22,3 +22,17 @@ after_success:
  - docker push zamlythaha/multi-server
  - docker push zamlythaha/multi-worker
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "multi-docker"
+  env: "MultiDocker-env"
+  bucket_name: "elasticbeanstalk-us-east-1-561421712725"
+  bucket_path: "multi-docker"
+  on:
+    branch: master
+  access_key_id: 
+    secure: $AWS_USER_ID
+  secret_access_key:
+    secure: "$AWS_SECRET"
+
