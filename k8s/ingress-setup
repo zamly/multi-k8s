@@ -1,0 +1,9 @@
+INGRESS has to be setup as a seperate service in the cluster
+When this is installed, following things will be created:
+ - the load balance servie which will map to google cloud load balancer service
+ - a deployment setup which will be running the ingress controller and nginx pod 
+
+ PRODUCTION SETUP
+  - Go to kubernetes.github.io/ingress-nginx
+  - click deployment tab
+  - use helm to install ingress gcloud.
